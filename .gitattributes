@@ -1,0 +1,8 @@
+# Ensure that text files have consistent line endings
+* text=auto
+
+# Explicitly handle specific file types
+*.js text
+*.json text
+*.md text
+*.txt text
