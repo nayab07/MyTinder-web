@@ -44,15 +44,15 @@ const EditProfile = ({ user }) => {
 
   return (
     <>
-      <div className="flex justify-center space-x-4 my-5">
+      <div className="flex flex-col sm:flex-row justify-center space-x-4 my-5">
         {/* Form Container */}
         <div className="p-5 bg-base-300 mt-2 mb-9 w-full max-w-[400px] rounded-md">
           <h2 className="text-2xl font-semibold">Edit Profile</h2>
           <form className="space-y-4">
             {error && <div className="text-red-500 mt-2">{error}</div>}
 
-            {/* First Name and Last Name in the same row */}
-            <div className="flex space-x-4">
+            {/* First Name and Last Name in the same row on larger screens */}
+            <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-4 sm:space-y-0 space-y-4">
               {/* First Name */}
               <div className="flex-1">
                 <label
@@ -183,7 +183,7 @@ const EditProfile = ({ user }) => {
       {showToast && (
         <div className="toast toast-top toast-start">
           <div className="alert alert-success">
-            <span>update successfull.</span>
+            <span>Update successful.</span>
           </div>
         </div>
       )}

@@ -5,7 +5,7 @@ const ConnectionRequest = require("../models/connectionRequest");
 const User = require("../models/user");
 
 requestRouter.post(
-  "/api/request/send/:status/:toUserId",
+  "/request/send/:status/:toUserId",
   userAuth,
   async (req, res) => {
     try {
@@ -51,7 +51,7 @@ requestRouter.post(
 );
 
 requestRouter.post(
-  "/api/request/review/:status/:requestId",
+  "/request/review/:status/:requestId",
   userAuth,
   async (req, res) => {
     try {

@@ -8,7 +8,7 @@ const { validateEditProfileData } = require("../utils/validation");
 const profileRouter = express.Router();
 
 //profile
-profileRouter.get("/api/profile/view", userAuth, async (req, res) => {
+profileRouter.get("/profile/view", userAuth, async (req, res) => {
   try {
     const user = req.user;
     res.send(user);
@@ -17,7 +17,7 @@ profileRouter.get("/api/profile/view", userAuth, async (req, res) => {
   }
 });
 
-profileRouter.put("/api/profile/edit", userAuth, async (req, res) => {
+profileRouter.put("/profile/edit", userAuth, async (req, res) => {
   try {
     // Validate the input data
     if (!validateEditProfileData(req)) {

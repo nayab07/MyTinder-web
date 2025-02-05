@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser')
 
 const authRouter=express.Router();
 
-authRouter.post("/api/signup",async(req,res)=>{
+authRouter.post("/signup",async(req,res)=>{
     const {firstName,lastName,emailId,Password,photoUrl,gender,age,about}=req.body;
 try{
     // validation of data
@@ -26,7 +26,7 @@ try{
 })
 
 //Login api
-authRouter.post("/api/login", async (req, res) => {
+authRouter.post("/login", async (req, res) => {
     try {
         const { emailId, Password } = req.body;
 
@@ -60,7 +60,7 @@ authRouter.post("/api/login", async (req, res) => {
     }
 });
 
-authRouter.post("/api/logout",async(req,res)=>{
+authRouter.post("/logout",async(req,res)=>{
     res.cookie("token",null,{
         expires:new Date(Date.now()),
     })

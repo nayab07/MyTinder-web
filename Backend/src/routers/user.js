@@ -7,7 +7,7 @@ const User=require("../models/user")
 
 const USER_SAFE_DATA="firstName lastName age skills photoUrl age gender about";
 
-userRouter.get("/api/user/requests/recieved", userAuth, async (req, res) => {
+userRouter.get("/user/requests/recieved", userAuth, async (req, res) => {
   try {
     const loggedInUser = req.user;
 
@@ -25,7 +25,7 @@ userRouter.get("/api/user/requests/recieved", userAuth, async (req, res) => {
   }
 });
 
-userRouter.get("/api/user/connection", userAuth, async (req, res) => {
+userRouter.get("/user/connection", userAuth, async (req, res) => {
   try {
     const loggedInUser = req.user;
 
@@ -49,7 +49,7 @@ userRouter.get("/api/user/connection", userAuth, async (req, res) => {
   }
 });
 
-userRouter.get("/api/feed", userAuth, async (req, res) => {
+userRouter.get("/feed", userAuth, async (req, res) => {
   try {
     const loggedInUser = req.user;
     
